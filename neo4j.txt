@@ -1,0 +1,23 @@
+CREATE (INTJ:Personality {type:'INTJ, title:'Architect', description:'Imaginative and strategic thinkers, with a plan for everything'})
+CREATE (INTP:Personality {type:'INTP, title:'Logician', description:'Innovative inventors with an unquenchable thirst for knowledge'})
+CREATE (ENTJ:Personality {type:'ENTJ, title:'Commander', description:'Bold, imaginative and strong-willed leaders, always finding a way or making one'})
+CREATE (ENTP:Personality {type:'ENTP, title:'Debater', description:'Smart and curious thinkers who cannot resist an intellectual challenge'})
+CREATE (INFJ:Personality {type:'INFJ, title:'Advocate', description:'Quiet and mystical, yet very inspiring and tireless idealists'})
+CREATE (INFP:Personality {type:'INFP, title:'Mediator', description:'Poetic, kind and altruistic people, always eager to help a good cause'})
+CREATE (ENFJ:Personality {type:'ENFJ, title:'Protagonist', description:'Charismatic and inspiring leaders, able to mesmerize their listeners'})
+CREATE (ENFP:Personality {type:'ENFP, title:'Campaigner', description:'Enthusiastic, creative and sociable free spirits, who can always find a reason to smile'})
+CREATE (ISTJ:Personality {type:'ISTJ, title:'Logistician', description:'Practical and fact-minded individuals, whose reliability cannot be doubted'})
+CREATE (ISFJ:Personality {type:'ISFJ, title:'Defender', description:'Very dedicated and warm protectors, always ready to defend their loved ones'})
+CREATE (ESTJ:Personality {type:'ESTJ, title:'Executive', description:'Excellent administrators, unsurpassed at managing things – or people'})
+CREATE (ESFJ:Personality {type:'ESFJ, title:'Consul', description:'Extraordinarily caring, social and popular people, always eager to help'})
+CREATE (ISTP:Personality {type:'ISTP, title:'Virtuoso', description:'Bold and practical experimenters, masters of all kinds of tools'})
+CREATE (ISFP:Personality {type:'ISFP, title:'Adventurer', description:'Flexible and charming artists, always ready to explore and experience something new'})
+CREATE (ESTP:Personality {type:'ESTP, title:'Entrepreneur', description:'Smart, energetic and very perceptive people, who truly enjoy living on the edge'})
+CREATE (ESFP:Personality {type:'ESFP, title:'Entertainer', description:'Spontaneous, energetic and enthusiastic people – life is never boring around them'})
+
+CREATE
+  (ABCD)-[:RELATION {roles:['Identical']}]->(EFGH),
+  (EFGH)-[:RELATION {roles:['Identical']}]->(ABCD)
+;
+
+MATCH (n) RETURN n LIMIT 256
